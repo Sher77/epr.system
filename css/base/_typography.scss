@@ -1,0 +1,9 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  @include inter;
+
+  color: $color-black;
+  text-rendering: optimizeSpeed;
+}
