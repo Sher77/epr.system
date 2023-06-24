@@ -1,0 +1,36 @@
+.burger-btn {
+  @include btnReset;
+
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 20px;
+  cursor: pointer;
+
+
+  span {
+    &,
+    &::before,
+    &::after {
+      display: block;
+      width: 80%;
+      height: 3px;
+      background-color: rgba(0, 57, 92, 80%);
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      content: "";
+    }
+
+    &::before {
+      transform: translateY(-8px);
+    }
+    
+    &::after {
+      transform: translateY(8px);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 22px 80px 0;
+
+  &__btn {
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: $fs-s;
+    color: $color-text-secondary;
+  }
+
+  &__job-list {
+    margin-bottom: auto;
+  }
+}

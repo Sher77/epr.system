@@ -1,0 +1,37 @@
+.settings {
+  @include btnReset;
+  @include flex(center);
+
+  font-size: $fs-s;
+  color: $color-text-secondary;
+  font-weight: 600;
+
+  &__svg {
+    transition: all 0.3s ease-in-out;
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+      padding: 10px;
+      background-color: rgba($color-brand, 7%);
+      border-radius: 4px;
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
+
+  &:hover,
+  &:focus {
+
+    .settings {
+      &__svg {
+        transform: rotate(180deg);
+
+        &-wrap {
+          background-color: rgba($color-brand, 17%);
+        }
+      }
+    }
+  }
+}

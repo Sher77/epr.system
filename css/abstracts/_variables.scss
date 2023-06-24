@@ -13,20 +13,25 @@ $color-brand: rgb(0, 120, 210) !default;
 $color-text-main: rgb(0, 32, 51);
 $color-text-secondary: rgb(0, 32, 51, 60%);
 $color-text-light: rgb(0, 32, 51, 30%);
+$color-in-work: rgb(34, 195, 142);
+$color-pending: rgb(243, 139, 0);
+$color-done: rgb(0, 113, 178);
 
 /// Font sizes
+$fs-xxxs: 10px;
 $fs-xxs: 12px;
 $fs-xs: 14px;
 $fs-s: 16px;
 $fs-m: 18px;
-$fs-l: 22px;
+$fs-2m: 20px;
+$fs-l: 24px;
 $fs-x: 32px;
 $fs-xl: 35px;
 $fs-xxl: 44px;
 
 
 /// Container's maximum width
-$max-width: 1280px !default;
+$max-width: 1480px !default;
 $max-width--narrow: 1120px !default;
 
 

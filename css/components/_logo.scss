@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+  font-size: $fs-m;
+  text-transform: uppercase;
+
+  &__main {
+    font-weight: 800;
+    color: $color-black;
+  }
+
+  &__secondary {
+    color: $color-text-light;
+  }
+}

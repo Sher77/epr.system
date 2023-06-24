@@ -1,0 +1,15 @@
+.content {
+  padding: 60px 0 100px 60px;
+
+  &__head {
+    @include flex(center, space-between);
+
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-size: $fs-l;
+    color: $color-text-main;
+    font-weight: 700;
+  }
+}

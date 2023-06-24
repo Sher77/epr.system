@@ -1,0 +1,31 @@
+.user {
+  @include btnReset;
+  @include flex(center, space-between);
+
+  &__avatar {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__info {
+    margin-right: 10px;
+    text-align: left;
+  }
+
+  &__name {
+    font-size: $fs-s;
+    font-weight: 500;
+    color: $color-black;
+    text-transform: capitalize;
+  }
+
+  &__status {
+    font-size: $fs-xxs;
+    font-weight: 500;
+    color: $color-text-secondary;
+  }
+}

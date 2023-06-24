@@ -39,3 +39,20 @@
     max-width: $max-width--narrow;
   }
 }
+
+.vertical-indent {
+  &--s {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &--m {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &--l {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}

@@ -17,13 +17,25 @@
   'base/typography',
   'base/helpers';
 
-// 4. Layout-related sections
+// 4. Components
+@import
+'components/logo',
+'components/burger-btn',
+'components/btn',
+'components/user',
+'components/job-list',
+'components/work-list',
+'components/status',
+'components/settings',
+'components/search-input';
+
+// 5. Layout-related sections
 @import
   'layout/header',
+  'layout/aside',
+  'layout/content',
+  'layout/main',
   'layout/footer';
-
-// 5. Components
-// @import
 
 // 6. Page-specific styles
 @import
