@@ -1262,7 +1262,10 @@ body {
   color: rgba(0, 32, 51, 0.6);
 }
 .aside__job-list {
-  margin-bottom: auto;
+  margin-bottom: 20px;
+}
+.aside__settings {
+  margin-top: auto;
 }
 
 .analytics {

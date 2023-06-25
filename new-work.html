@@ -39,16 +39,16 @@
   <main class="section-main section-outer">
     <div class="section-inner">
       <aside class="aside main__aside">
-        <button class="btn aside__btn">
+        <a href="new-work.html" class="btn aside__btn">
           Добавить работу
           <svg class="btn__svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
             <path d="M7.5 0H5.5V5H0.5V7H5.5V12H7.5V7H12.5V5H7.5V0Z" fill="white"/>
           </svg>
-        </button>
+        </a>
         <p class="aside__title">Мои работы</p>
         <ul class="job-list aside__job-list">
           <li class="job-list__item">
-            <a href="##" class="job-list__link">
+            <a href="edit-work.html" class="job-list__link">
               <span class="job-list__link-text status status__in-work">Свадебные платья</span>
             </a>
           </li>
@@ -101,11 +101,11 @@
         </div>
         <div class="tabs">
           <div class="tabs__btns">
-            <button class="tab tab--active" data-target="#analytics">Аналитика</button>
-            <button class="tab" data-target="#editing">Редактирование</button>
+            <button class="tab" data-target="#analytics">Аналитика</button>
+            <button class="tab tab--active" data-target="#editing">Редактирование</button>
           </div>
           <div class="tab__content">
-            <div class="tab-pane tab-pane--active" id="analytics">
+            <div class="tab-pane" id="analytics">
               <div class="analytics">
                 <div class="analytics-table analytics__profit">
                   <div class="analytics-table__head">
@@ -142,7 +142,9 @@
                   </div>
                   <div class="analytics-table__body">
                     <div class="analytics-table__diagram">
-                      <canvas id="analytics-chart"></canvas>
+                      <div style="position: relative; height:250px; width:250px">
+                        <canvas id="analytics-chart"></canvas>
+                      </div>
                     </div>
                     <ul class="analytics-table__points-list">
                       <li class="analytics-table__points-item">
@@ -162,7 +164,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="editing">
+            <div class="tab-pane tab-pane--active" id="editing">
               <form action="#" class="form-work" id="form-work">
                 <label class="form-work__label">
                   <p class="form-work__desc">Название работы</p>
@@ -403,7 +405,7 @@
     </div>
   </main>
   
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/chart.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
