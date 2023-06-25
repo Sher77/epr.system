@@ -27,6 +27,10 @@
 'components/work-list',
 'components/status',
 'components/settings',
+'components/breadcrumbs',
+'components/tabs',
+'components/form-work',
+'components/table',
 'components/search-input';
 
 // 5. Layout-related sections
@@ -39,4 +43,5 @@
 
 // 6. Page-specific styles
 @import
+  'pages/login',
   'pages/home';

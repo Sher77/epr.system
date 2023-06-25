@@ -638,6 +638,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: initial;
+  justify-content: center;
   padding: 10px 30px;
   font-size: 16px;
   color: rgb(255, 255, 255);
@@ -704,7 +705,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.job-list__btn {
+.job-list__link {
   border: none;
   margin: 0;
   padding: 0;
@@ -720,11 +721,23 @@ body {
   width: 100%;
   text-align: left;
 }
-.job-list__btn-text {
+.job-list__link-text {
   display: inline;
   width: auto;
   font-size: 16px;
   color: rgb(0, 32, 51);
+}
+.job-list__link--active {
+  position: relative;
+}
+.job-list__link--active::before {
+  position: absolute;
+  top: 0;
+  right: -22px;
+  width: 2px;
+  height: 100%;
+  content: "";
+  background-color: rgba(0, 120, 210, 0.5);
 }
 
 .work-list {
@@ -888,6 +901,185 @@ body {
   background-color: rgba(0, 120, 210, 0.17);
 }
 
+.breadcrumbs {
+  margin-bottom: 15px;
+}
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs__item {
+  position: relative;
+}
+.breadcrumbs__item:not(:last-child) {
+  margin-right: 30px;
+}
+.breadcrumbs__item:not(:last-child)::before {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-40%);
+  width: 10px;
+  height: 10px;
+  background-image: url("../../assets/svg/arrow-right.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+.breadcrumbs__link {
+  font-size: 12px;
+  color: rgba(0, 32, 51, 0.6);
+}
+.breadcrumbs__link--current {
+  color: rgb(0, 32, 51);
+}
+
+.tabs__btns {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 64, 102, 0.3);
+}
+
+.tab {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+  padding: 5px 0;
+  color: rgba(0, 32, 51, 0.3);
+}
+.tab--active {
+  font-size: 16px;
+  color: rgb(0, 32, 51);
+  border-bottom: 2px solid rgb(0, 120, 210);
+}
+.tab:not(:last-child) {
+  margin-right: 10px;
+}
+
+.form-work__label {
+  display: block;
+}
+.form-work__label:not(:last-child) {
+  margin-bottom: 64px;
+}
+.form-work__label:first-child {
+  margin-bottom: 40px;
+}
+.form-work__desc {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: rgba(0, 32, 51, 0.6);
+}
+.form-work__input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: rgba(0, 32, 51, 0.3);
+  border: 1px solid rgba(0, 32, 51, 0.3);
+  border-radius: 5px;
+}
+.form-work__input--table {
+  width: 100%;
+  padding: 10px 15px;
+  color: rgba(0, 32, 51, 0.3);
+  border: none;
+  outline: none;
+}
+.form-work__select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: rgb(0, 32, 51);
+  border: 1px solid rgba(0, 32, 51, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../../assets/svg/arrow-bottom.svg");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+}
+.form-work__excel {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(0, 32, 51, 0.3);
+  border-radius: 5px;
+}
+.form-work__excel::before {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 70%;
+  background-color: rgba(0, 32, 51, 0.3);
+  content: "";
+}
+.form-work__excel-btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: rgb(0, 32, 51);
+}
+.form-work__excel-icon {
+  margin: 0 5px;
+}
+.form-work__excel-icon--rotated {
+  transform: rotate(180deg);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 4px;
+  overflow: hidden;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px rgba(0, 32, 51, 0.3);
+}
+.table__th {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  color: rgba(0, 32, 51, 0.6);
+  background-color: #ecf1f4;
+}
+.table__td {
+  border: 1px solid rgba(0, 32, 51, 0.3);
+}
+.table__thead th:not(:first-child)::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 40%;
+  background-color: rgba(0, 32, 51, 0.3);
+  content: "";
+  transform: translate(-0.5px, -50%);
+}
+
 .search {
   display: block;
   width: 300px;
@@ -994,4 +1186,74 @@ body {
 }
 .main__content {
   border-left: 1px solid rgba(0, 32, 51, 0.3);
+}
+
+.section-login {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(236, 241, 244);
+}
+.section-login .section-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.login__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 54px 32px;
+  margin-bottom: 64px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 32, 51, 0.1);
+}
+.login__title {
+  margin-bottom: 32px;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(0, 32, 51);
+}
+.login__title span {
+  text-transform: uppercase;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.login-form__label {
+  display: flex;
+  flex-direction: column;
+}
+.login-form__label:not(:last-child) {
+  margin-bottom: 16px;
+}
+.login-form__desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: rgba(0, 32, 51, 0.6);
+}
+.login-form__link {
+  color: rgb(0, 120, 210);
+}
+.login-form__input {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgba(0, 32, 51, 0.3);
+  border-radius: 5px;
+}
+.login__problem {
+  max-width: 320px;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 32, 51, 0.3);
 }/*# sourceMappingURL=main.css.map */

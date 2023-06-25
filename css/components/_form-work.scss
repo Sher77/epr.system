@@ -1,0 +1,88 @@
+.form-work {
+  &__label {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+
+    &:first-child {
+      margin-bottom: 40px;
+    }
+  }
+  
+  &__desc {
+    display: block;
+    margin-bottom: 8px;
+    font-size: $fs-xs;
+    color: $color-text-secondary;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: $fs-s;
+    color: $color-text-light;
+    border: 1px solid $color-text-light;
+    border-radius: 5px;
+
+    &--table {
+      width: 100%;
+      padding: 10px 15px;
+      color: $color-text-light;
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: $fs-s;
+    color: $color-text-main;
+    border: 1px solid $color-text-light;
+    border-radius: 5px;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("../../assets/svg/arrow-bottom.svg");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+  }
+
+  &__excel {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 16px;
+    border: 1px solid $color-text-light;
+    border-radius: 5px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 51%;
+      transform: translate(-50%, -50%);
+      width: 1px;
+      height: 70%;
+      background-color: $color-text-light;
+      content: "";
+    }
+
+    &-btn {
+      @include btnReset;
+
+      padding: 6px 10px;
+      font-size: $fs-xs;
+      color: $color-text-main;
+    }
+
+    &-icon {
+      margin: 0 5px;
+      &--rotated {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.breadcrumbs {
+  margin-bottom: 15px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+  
+      &::before {
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-40%);
+        width: 10px;
+        height: 10px;
+        background-image: url("../../assets/svg/arrow-right.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        content: "";
+      }
+    }
+  }
+
+  &__link {
+    font-size: $fs-xxs;
+    color: $color-text-secondary;
+
+    &--current {
+      color: $color-text-main;
+    }
+  }
+}

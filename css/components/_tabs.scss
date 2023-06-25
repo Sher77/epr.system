@@ -1,0 +1,25 @@
+.tabs {
+  &__btns {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid lighten($color-text-light, 10%);
+  }
+}
+
+.tab {
+  @include btnReset;
+
+  padding: 5px 0;
+  color: $color-text-light;
+  
+  &--active {
+    font-size: $fs-s;
+    color: $color-text-main;
+    border-bottom: 2px solid $color-brand;
+  }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
