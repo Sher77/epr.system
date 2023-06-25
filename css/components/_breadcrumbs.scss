@@ -1,4 +1,6 @@
 .breadcrumbs {
+  position: relative;
+  display: inline-flex;
   margin-bottom: 15px;
 
   &__list {
@@ -33,6 +35,34 @@
 
     &--current {
       color: $color-text-main;
+    }
+  }
+  
+  &__status {
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    padding: 4px 2px;
+    border-radius: 4px;
+    font-size: $fs-xxxs;
+    font-weight: 500;
+    text-transform: uppercase;
+    transform: translateY(-45%);
+    white-space: nowrap;
+    
+    &-in-work {
+      color: $color-in-work;
+      border: 1px solid $color-in-work;
+    }
+    
+    &-pending {
+      color: $color-pending;
+      border: 1px solid $color-pending;
+    }
+    
+    &-done {
+      color: $color-done;
+      border: 1px solid $color-done;
     }
   }
 }

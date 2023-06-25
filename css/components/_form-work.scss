@@ -22,16 +22,24 @@
     width: 100%;
     padding: 10px 15px;
     font-size: $fs-s;
-    color: $color-text-light;
+    color: $color-text-main;
     border: 1px solid $color-text-light;
     border-radius: 5px;
+    
+    &::placeholder {
+      color: $color-text-main;
+    }
 
     &--table {
       width: 100%;
       padding: 10px 15px;
-      color: $color-text-light;
+      color: $color-text-main;
       border: none;
       outline: none;
+
+      &::placeholder {
+        color: $color-text-main;
+      }
     }
   }
 

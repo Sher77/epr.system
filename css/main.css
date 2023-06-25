@@ -902,6 +902,8 @@ body {
 }
 
 .breadcrumbs {
+  position: relative;
+  display: inline-flex;
   margin-bottom: 15px;
 }
 .breadcrumbs__list {
@@ -932,6 +934,30 @@ body {
 }
 .breadcrumbs__link--current {
   color: rgb(0, 32, 51);
+}
+.breadcrumbs__status {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  padding: 4px 2px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transform: translateY(-45%);
+  white-space: nowrap;
+}
+.breadcrumbs__status-in-work {
+  color: rgb(34, 195, 142);
+  border: 1px solid rgb(34, 195, 142);
+}
+.breadcrumbs__status-pending {
+  color: rgb(243, 139, 0);
+  border: 1px solid rgb(243, 139, 0);
+}
+.breadcrumbs__status-done {
+  color: rgb(0, 113, 178);
+  border: 1px solid rgb(0, 113, 178);
 }
 
 .tabs__btns {
@@ -983,16 +1009,34 @@ body {
   width: 100%;
   padding: 10px 15px;
   font-size: 16px;
-  color: rgba(0, 32, 51, 0.3);
+  color: rgb(0, 32, 51);
   border: 1px solid rgba(0, 32, 51, 0.3);
   border-radius: 5px;
+}
+.form-work__input::-moz-placeholder {
+  color: rgb(0, 32, 51);
+}
+.form-work__input:-ms-input-placeholder {
+  color: rgb(0, 32, 51);
+}
+.form-work__input::placeholder {
+  color: rgb(0, 32, 51);
 }
 .form-work__input--table {
   width: 100%;
   padding: 10px 15px;
-  color: rgba(0, 32, 51, 0.3);
+  color: rgb(0, 32, 51);
   border: none;
   outline: none;
+}
+.form-work__input--table::-moz-placeholder {
+  color: rgb(0, 32, 51);
+}
+.form-work__input--table:-ms-input-placeholder {
+  color: rgb(0, 32, 51);
+}
+.form-work__input--table::placeholder {
+  color: rgb(0, 32, 51);
 }
 .form-work__select {
   width: 100%;

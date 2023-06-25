@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Работа | Редактирование существующей работы</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="section-header section-outer">
+    <div class="section-inner vertical-indent--s">
+      <button class="burger-btn header__burger-btn" aria-label="Кнопка скрытия боковой панели">
+        <span></span>
+      </button>
+      <a href="index.html" class="logo header__logo">
+        <span class="logo__main">Ателье</span>
+        <span class="logo__secondary">Erp</span>
+      </a>
+      <div class="search header__search">
+        <label class="search__label">
+          <input type="search" class="search__input" placeholder="Искать работу...">
+        </label>
+      </div>
+      <button class="user header__user">
+        <img class="user__avatar" src="assets/img/avatar.jpg" alt="Аватарка пользователя" width="32" height="32">
+        <div class="user__info">
+          <p class="user__name">Иван Дрёмин</p>
+          <p class="user__status">Владелец</p>
+        </div>
+        <svg class="user__svg" width="10" height="5" viewBox="0 0 10 5" fill="none">
+          <path d="M0.5 0L5 5L9.5 0H0.5Z" fill="#00395C" fill-opacity="0.8"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="section-main section-outer">
+    <div class="section-inner">
+      <aside class="aside main__aside">
+        <button class="btn aside__btn">
+          Добавить работу
+          <svg class="btn__svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+            <path d="M7.5 0H5.5V5H0.5V7H5.5V12H7.5V7H12.5V5H7.5V0Z" fill="white"/>
+          </svg>
+        </button>
+        <p class="aside__title">Мои работы</p>
+        <ul class="job-list aside__job-list">
+          <li class="job-list__item">
+            <a href="##" class="job-list__link job-list__link--active">
+              <span class="job-list__link-text status status__in-work">Свадебные платья</span>
+            </a>
+          </li>
+          <li class="job-list__item">
+            <a href="##" class="job-list__link">
+              <span class="job-list__link-text status status__done">Школьные костюмы</span>
+            </a>
+          </li>
+          <li class="job-list__item">
+            <a href="##" class="job-list__link">
+              <span class="job-list__link-text status status__pending">Спец. одежда, Аэропорт</span>
+            </a>
+          </li>
+          <li class="job-list__item">
+            <a href="##" class="job-list__link">
+              <span class="job-list__link-text status status__in-work">Спец. одежда, Охрана</span>
+            </a>
+          </li>
+          <li class="job-list__item">
+            <a href="##" class="job-list__link">
+              <span class="job-list__link-text status status__in-work">Спец. одежда, Строитель</span>
+            </a>
+          </li>
+        </ul>
+        <button class="settings aside__settings">
+          <div class="settings__svg-wrap">
+            <svg class="settings__svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+              <path d="M11.4533 7.65337C11.48 7.44004 11.5 7.22671 11.5 7.00004C11.5 6.77337 11.48 6.56004 11.4533 6.34671L12.86 5.24671C12.9867 5.14671 13.02 4.96671 12.94 4.82004L11.6067 2.51337C11.5267 2.36671 11.3467 2.31337 11.2 2.36671L9.54002 3.03337C9.19335 2.76671 8.82002 2.54671 8.41335 2.38004L8.16002 0.613374C8.14002 0.453374 8.00002 0.333374 7.83335 0.333374H5.16668C5.00002 0.333374 4.86002 0.453374 4.84002 0.613374L4.58668 2.38004C4.18002 2.54671 3.80668 2.77337 3.46002 3.03337L1.80001 2.36671C1.64668 2.30671 1.47335 2.36671 1.39335 2.51337L0.060015 4.82004C-0.0266517 4.96671 0.0133484 5.14671 0.140015 5.24671L1.54668 6.34671C1.52002 6.56004 1.50002 6.78004 1.50002 7.00004C1.50002 7.22004 1.52002 7.44004 1.54668 7.65337L0.140015 8.75337C0.0133484 8.85337 -0.019985 9.03337 0.060015 9.18004L1.39335 11.4867C1.47335 11.6334 1.65335 11.6867 1.80001 11.6334L3.46002 10.9667C3.80668 11.2334 4.18002 11.4534 4.58668 11.62L4.84002 13.3867C4.86002 13.5467 5.00002 13.6667 5.16668 13.6667H7.83335C8.00002 13.6667 8.14002 13.5467 8.16002 13.3867L8.41335 11.62C8.82002 11.4534 9.19335 11.2267 9.54002 10.9667L11.2 11.6334C11.3533 11.6934 11.5267 11.6334 11.6067 11.4867L12.94 9.18004C13.02 9.03337 12.9867 8.85337 12.86 8.75337L11.4533 7.65337ZM6.50002 9.33337C5.21335 9.33337 4.16668 8.28671 4.16668 7.00004C4.16668 5.71337 5.21335 4.66671 6.50002 4.66671C7.78668 4.66671 8.83335 5.71337 8.83335 7.00004C8.83335 8.28671 7.78668 9.33337 6.50002 9.33337Z" fill="#00395C" fill-opacity="0.8"/>
+            </svg>
+          </div>
+          Настройки
+        </button>
+      </aside>
+      <div class="content main__content">
+        <div class="breadcrumbs main__breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="index.html" class="breadcrumbs__link">Все работы</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="##" class="breadcrumbs__link breadcrumbs__link--current">Свадебные платья</a>
+            </li>
+          </ul>
+          <span class="breadcrumbs__status breadcrumbs__status-in-work">В работе</span>
+        </div>
+        <div class="content__head">
+          <h1 class="content__title">Свадебные платья</h1>
+          <button class="btn content__btn" form="form-work">
+            Сохранить
+          </button>
+        </div>
+        <div class="tabs">
+          <div class="tabs__btns">
+            <button class="tab" data-target="#analytics">Аналитика</button>
+            <button class="tab tab--active" data-target="#editing">Редактирование</button>
+          </div>
+          <div class="tab__content">
+            <div class="tab-pane" id="analytics"></div>
+            <div class="tab-pane" id="editing">
+              <form action="#" class="form-work" id="form-work">
+                <label class="form-work__label">
+                  <p class="form-work__desc">Название работы</p>
+                  <input type="text" class="form-work__input" name="title" placeholder="Свадебные платья">
+                </label>
+                <label class="form-work__label">
+                  <p class="form-work__desc">Статус работы</p>
+                  <select name="" id="" class="form-work__select">
+                    <option value="В работе">В работе</option>
+                    <option value="В ожидании">В ожидании</option>
+                    <option value="Выполнено">Выполнено</option>
+                  </select>
+                </label>
+                <label class="form-work__label">
+                  <p class="form-work__desc">Параметры продаваемого товара</p>
+                  <div class="form-work__excel">
+                    <button class="form-work__excel-btn" type="button">
+                      <svg class="form-work__excel-icon" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M10 10V9H0L0 10H10Z" fill="#002033"/>
+                        <path d="M4.49895 0V6.29332L2.14126 3.92845L1.43416 4.63555L4.99895 8.20753L8.53906 4.66913L7.83196 3.96202L5.49895 6.29331V0L4.49895 0Z" fill="#002033"/>
+                      </svg>
+                      Загрузить из Excel
+                    </button>
+                    <button class="form-work__excel-btn" type="button">
+                      <svg class="form-work__excel-icon form-work__excel-icon--rotated" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M10 10V9H0L0 10H10Z" fill="#002033"/>
+                        <path d="M4.49895 0V6.29332L2.14126 3.92845L1.43416 4.63555L4.99895 8.20753L8.53906 4.66913L7.83196 3.96202L5.49895 6.29331V0L4.49895 0Z" fill="#002033"/>
+                      </svg>
+                      Выгрузить в Excel
+                    </button>
+                  </div>
+                  <table class="form-work__table table">
+                    <thead class="table__thead">
+                      <tr class="table__tr">
+                        <th class="table__th">Название</th>
+                        <th class="table__th">Количество</th>
+                        <th class="table__th">Маржа (%)</th>
+                        <th class="table__th">Цена за единицу (тг)</th>
+                        <th class="table__th">Общая цена (тг)</th>
+                      </tr>
+                    </thead>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="Свадебные платья" name="product-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="10" name="product-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="20" name="product-profit">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="400 000" name="product-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="4 000 000" name="product-total-price">
+                      </td>
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="product-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="product-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="product-profit">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="product-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="product-total-price">
+                      </td>
+                    </tr>
+                  </table>
+                </label>
+                <label class="form-work__label">
+                  <p class="form-work__desc">Материалы</p>
+                  <div class="form-work__excel">
+                    <button class="form-work__excel-btn" type="button">
+                      Загрузить из Excel
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M10 10V9H0L0 10H10Z" fill="#002033"/>
+                        <path d="M4.49895 0V6.29332L2.14126 3.92845L1.43416 4.63555L4.99895 8.20753L8.53906 4.66913L7.83196 3.96202L5.49895 6.29331V0L4.49895 0Z" fill="#002033"/>
+                      </svg>
+                    </button>
+                    <button class="form-work__excel-btn" type="button">
+                      Выгрузить в Excel
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M10 10V9H0L0 10H10Z" fill="#002033"/>
+                        <path d="M4.49895 0V6.29332L2.14126 3.92845L1.43416 4.63555L4.99895 8.20753L8.53906 4.66913L7.83196 3.96202L5.49895 6.29331V0L4.49895 0Z" fill="#002033"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <table class="form-work__table table">
+                    <thead class="table__thead">
+                      <tr class="table__tr">
+                        <th class="table__th">Название</th>
+                        <th class="table__th">Количество</th>
+                        <th class="table__th">Цена за единицу (тг)</th>
+                        <th class="table__th">Итоговые затраты (тг)</th>
+                      </tr>
+                    </thead>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="Парча" name="material-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="1" name="material-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="25 000" name="material-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="25 0000" name="material-total-price">
+                      </td>
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="Бижутерии" name="material-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="10" name="material-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="800" name="material-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="8 000" name="material-total-price">
+                      </td>
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="Тафта" name="material-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="1" name="material-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="20 000" name="material-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="20 000" name="material-total-price">
+                      </td>
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="material-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="material-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="material-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="material-total-price">
+                      </td>
+                    </tr>
+                  </table>
+                </label>
+                <label class="form-work__label">
+                  <p class="form-work__desc">Фонд оплаты труда</p>
+                  <div class="form-work__excel">
+                    <button class="form-work__excel-btn" type="button">
+                      Загрузить из Excel
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M10 10V9H0L0 10H10Z" fill="#002033"/>
+                        <path d="M4.49895 0V6.29332L2.14126 3.92845L1.43416 4.63555L4.99895 8.20753L8.53906 4.66913L7.83196 3.96202L5.49895 6.29331V0L4.49895 0Z" fill="#002033"/>
+                      </svg>
+                    </button>
+                    <button class="form-work__excel-btn" type="button">
+                      Выгрузить в Excel
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M10 10V9H0L0 10H10Z" fill="#002033"/>
+                        <path d="M4.49895 0V6.29332L2.14126 3.92845L1.43416 4.63555L4.99895 8.20753L8.53906 4.66913L7.83196 3.96202L5.49895 6.29331V0L4.49895 0Z" fill="#002033"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <table class="form-work__table table">
+                    <thead class="table__thead">
+                      <tr class="table__tr">
+                        <th class="table__th">Название</th>
+                        <th class="table__th">Количество</th>
+                        <th class="table__th">Цена за единицу (тг)</th>
+                        <th class="table__th">Итоговые затраты (тг)</th>
+                      </tr>
+                    </thead>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="Швея" name="payment-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="1" name="payment-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="70 000" name="payment-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="70 000" name="payment-total-costs">
+                      </td>
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="Портной" name="payment-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="1" name="payment-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="75 000" name="payment-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="75 000" name="payment-total-costs">
+                      </td>
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="Стилист" name="payment-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="1" name="payment-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="90 000" name="payment-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="90 000" name="payment-total-costs">
+                      </td>
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="payment-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="payment-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="payment-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="payment-total-costs">
+                      </td>
+                    </tr>
+                  </table>
+                </label>
+                <label class="form-work__label">
+                  <p class="form-work__desc">Реклама</p>
+                  <div class="form-work__excel">
+                    <button class="form-work__excel-btn" type="button">
+                      Загрузить из Excel
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M10 10V9H0L0 10H10Z" fill="#002033"/>
+                        <path d="M4.49895 0V6.29332L2.14126 3.92845L1.43416 4.63555L4.99895 8.20753L8.53906 4.66913L7.83196 3.96202L5.49895 6.29331V0L4.49895 0Z" fill="#002033"/>
+                      </svg>
+                    </button>
+                    <button class="form-work__excel-btn" type="button">
+                      Выгрузить в Excel
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M10 10V9H0L0 10H10Z" fill="#002033"/>
+                        <path d="M4.49895 0V6.29332L2.14126 3.92845L1.43416 4.63555L4.99895 8.20753L8.53906 4.66913L7.83196 3.96202L5.49895 6.29331V0L4.49895 0Z" fill="#002033"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <table class="form-work__table table">
+                    <thead class="table__thead">
+                      <tr class="table__tr">
+                        <th class="table__th">Название</th>
+                        <th class="table__th">Количество</th>
+                        <th class="table__th">Цена за единицу (тг)</th>
+                        <th class="table__th">Итоговые затраты (тг)</th>
+                      </tr>
+                    </thead>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="Рекласа в Instagram" name="ad-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="1" name="ad-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="20 000" name="ad-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="20 000" name="ad-total-costs">
+                      </td>
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="Реклама в YouTube" name="ad-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="1" name="ad-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="20 000" name="ad-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="20 000" name="ad-total-costs">
+                      </td>
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="ad-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="ad-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="ad-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="ad-total-costs">
+                      </td>
+                    </tr>
+                  </table>
+                </label>
+                <label class="form-work__label">
+                  <p class="form-work__desc">Аренда</p>
+                  <div class="form-work__excel">
+                    <button class="form-work__excel-btn" type="button">
+                      Загрузить из Excel
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M10 10V9H0L0 10H10Z" fill="#002033"/>
+                        <path d="M4.49895 0V6.29332L2.14126 3.92845L1.43416 4.63555L4.99895 8.20753L8.53906 4.66913L7.83196 3.96202L5.49895 6.29331V0L4.49895 0Z" fill="#002033"/>
+                      </svg>
+                    </button>
+                    <button class="form-work__excel-btn" type="button">
+                      Выгрузить в Excel
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M10 10V9H0L0 10H10Z" fill="#002033"/>
+                        <path d="M4.49895 0V6.29332L2.14126 3.92845L1.43416 4.63555L4.99895 8.20753L8.53906 4.66913L7.83196 3.96202L5.49895 6.29331V0L4.49895 0Z" fill="#002033"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <table class="form-work__table table">
+                    <thead class="table__thead">
+                      <tr class="table__tr">
+                        <th class="table__th">Название</th>
+                        <th class="table__th">Количество</th>
+                        <th class="table__th">Цена за единицу (тг)</th>
+                        <th class="table__th">Итоговые затраты (тг)</th>
+                      </tr>
+                    </thead>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="Основное помещение" name="rent-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="1" name="rent-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="100 000" name="rent-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" placeholder="100 000" name="rent-total-costs">
+                      </td>
+                    </tr>
+                    <tr class="table__tr">
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="rent-title">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="rent-qty">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="rent-price-for-one">
+                      </td>
+                      <td class="table__td">
+                        <input type="text" class="form-work__input--table" name="rent-total-costs">
+                      </td>
+                    </tr>
+                  </table>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
