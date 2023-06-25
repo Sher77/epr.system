@@ -31,4 +31,10 @@
       background-color: $color-done;
     }
   }
+
+  &__process {
+    &::before {
+      background-color: rgba($color-text-light, 10%);
+    }
+  }
 }

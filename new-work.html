@@ -101,11 +101,67 @@
         </div>
         <div class="tabs">
           <div class="tabs__btns">
-            <button class="tab" data-target="#analytics">Аналитика</button>
-            <button class="tab tab--active" data-target="#editing">Редактирование</button>
+            <button class="tab tab--active" data-target="#analytics">Аналитика</button>
+            <button class="tab" data-target="#editing">Редактирование</button>
           </div>
           <div class="tab__content">
-            <div class="tab-pane" id="analytics"></div>
+            <div class="tab-pane tab-pane--active" id="analytics">
+              <div class="analytics">
+                <div class="analytics-table analytics__profit">
+                  <div class="analytics-table__head">
+                    <p class="analytics-table__title">Рентабельность продаж</p>
+                    <p class="analytics-table__feature">По показятелям</p>
+                  </div>
+                  <div class="analytics-table__body">
+                    <ul class="analytics-table__list">
+                      <li class="analytics-table__item">
+                        <p class="analytics-table__profit">Расходы</p>
+                        <p class="analytics-table__total">4 120 225,45 ₸</p>
+                      </li>
+                      <li class="analytics-table__item">
+                        <p class="analytics-table__profit">Доходы</p>
+                        <p class="analytics-table__total">4 400 000,25 ₸</p>
+                      </li>
+                    </ul>
+                    <ul class="analytics-table__list">
+                      <li class="analytics-table__item">
+                        <p class="analytics-table__profit">Прибыль (доходы - расходы)</p>
+                        <p class="analytics-table__total analytics-table__total--green">280 000 ₸</p>
+                      </li>
+                      <li class="analytics-table__item">
+                        <p class="analytics-table__profit">Рентабельность (затраты / расходы)</p>
+                        <p class="analytics-table__total analytics-table__total--green">6 %</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="analytics-table analytics__statistics">
+                  <div class="analytics-table__head">
+                    <p class="analytics-table__title">Статистика затрат</p>
+                    <p class="analytics-table__feature">По категориям</p>
+                  </div>
+                  <div class="analytics-table__body">
+                    <div class="analytics-table__diagram">
+                      <canvas id="analytics-chart"></canvas>
+                    </div>
+                    <ul class="analytics-table__points-list">
+                      <li class="analytics-table__points-item">
+                        <span class="analytics-table__points-text status status__in-work">Материалы</span>
+                      </li>
+                      <li class="analytics-table__points-item">
+                        <span class="analytics-table__points-text status status__pending">Фонд оплаты труда</span>
+                      </li>
+                      <li class="analytics-table__points-item">
+                        <span class="analytics-table__points-text status status__done">Реклама</span>
+                      </li>
+                      <li class="analytics-table__points-item">
+                        <span class="analytics-table__points-text status status__process">Аренда</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="tab-pane" id="editing">
               <form action="#" class="form-work" id="form-work">
                 <label class="form-work__label">
@@ -347,6 +403,7 @@
     </div>
   </main>
   
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

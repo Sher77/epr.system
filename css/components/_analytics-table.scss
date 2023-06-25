@@ -1,0 +1,64 @@
+.analytics-table {
+  border: 1px solid $color-text-light;
+  border-radius: 4px;
+
+  &__head {
+    padding: 25px 20px 32px;
+    border-bottom: 1px solid $color-text-light;
+  }
+
+  &__title {
+    margin-bottom: 6px;
+    font-size: $fs-s;
+    font-weight: 600;
+  }
+
+  &__feature {
+    font-size: $fs-xs;
+    color: $color-text-secondary;
+  }
+
+  &__body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px 40px 150px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__profit {
+    margin-bottom: 10px;
+    font-size: $fs-xs;
+  }
+
+  &__total {
+    font-size: $fs-2m;
+    font-weight: 600;
+
+    &--green {
+      color: $color-in-work;
+    }
+  }
+
+  &__points {
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-text {
+      font-size: $fs-xxs;
+      color: $color-text-secondary;
+
+      &::before {
+        left: -15px;
+      }
+    }
+  }
+}

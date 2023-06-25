@@ -522,7 +522,7 @@ select {
  */
 body {
   font-family: "Inter", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: rgb(0, 0, 0);
+  color: rgb(0, 32, 51);
   text-rendering: optimizeSpeed;
 }
 
@@ -862,6 +862,9 @@ body {
 .status__done::before {
   background-color: rgb(0, 113, 178);
 }
+.status__process::before {
+  background-color: rgba(0, 32, 51, 0.1);
+}
 
 .settings {
   border: none;
@@ -960,6 +963,9 @@ body {
   border: 1px solid rgb(0, 113, 178);
 }
 
+.tabs {
+  width: 100%;
+}
 .tabs__btns {
   display: flex;
   align-items: center;
@@ -988,6 +994,12 @@ body {
 }
 .tab:not(:last-child) {
   margin-right: 10px;
+}
+.tab-pane {
+  display: none;
+}
+.tab-pane--active {
+  display: block;
 }
 
 .form-work__label {
@@ -1124,6 +1136,54 @@ body {
   transform: translate(-0.5px, -50%);
 }
 
+.analytics-table {
+  border: 1px solid rgba(0, 32, 51, 0.3);
+  border-radius: 4px;
+}
+.analytics-table__head {
+  padding: 25px 20px 32px;
+  border-bottom: 1px solid rgba(0, 32, 51, 0.3);
+}
+.analytics-table__title {
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.analytics-table__feature {
+  font-size: 14px;
+  color: rgba(0, 32, 51, 0.6);
+}
+.analytics-table__body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px 40px 150px;
+}
+.analytics-table__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.analytics-table__profit {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.analytics-table__total {
+  font-size: 20px;
+  font-weight: 600;
+}
+.analytics-table__total--green {
+  color: rgb(34, 195, 142);
+}
+.analytics-table__points-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+.analytics-table__points-text {
+  font-size: 12px;
+  color: rgba(0, 32, 51, 0.6);
+}
+.analytics-table__points-text::before {
+  left: -15px;
+}
+
 .search {
   display: block;
   width: 300px;
@@ -1205,6 +1265,16 @@ body {
   margin-bottom: auto;
 }
 
+.analytics {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 40px;
+}
+.analytics__profit, .analytics__statistics {
+  flex-basis: 50%;
+}
+
 .content {
   padding: 60px 0 100px 60px;
 }
@@ -1229,6 +1299,8 @@ body {
   flex-shrink: 0;
 }
 .main__content {
+  min-height: 100vh;
+  flex-grow: 1;
   border-left: 1px solid rgba(0, 32, 51, 0.3);
 }
 

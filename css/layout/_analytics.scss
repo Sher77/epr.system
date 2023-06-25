@@ -1,0 +1,11 @@
+.analytics {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 40px;
+
+  &__profit,
+  &__statistics {
+    flex-basis: 50%;
+  }
+}

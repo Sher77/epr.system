@@ -31,12 +31,14 @@
 'components/tabs',
 'components/form-work',
 'components/table',
+'components/analytics-table',
 'components/search-input';
 
 // 5. Layout-related sections
 @import
   'layout/header',
   'layout/aside',
+  'layout/analytics',
   'layout/content',
   'layout/main',
   'layout/footer';
