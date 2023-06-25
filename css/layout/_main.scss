@@ -29,7 +29,7 @@
     flex-grow: 1;
     border-left: 1px solid $color-text-light;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 992px) {
       padding: 30px;
 
       .content {

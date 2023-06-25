@@ -744,7 +744,7 @@ body {
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 
 .work {
@@ -1424,7 +1424,7 @@ body {
   flex-grow: 1;
   border-left: 1px solid rgba(0, 32, 51, 0.3);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .main__content {
     padding: 30px;
   }
