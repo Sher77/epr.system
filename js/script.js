@@ -3,8 +3,7 @@
 const showPieChart = () => {
   const analyticsChart = document.querySelector('#analytics-chart');
 
-  console.log(analyticsChart);
-
+  if(!analyticsChart) return;
 
   new Chart(analyticsChart, {
     options: {
@@ -65,3 +64,40 @@ const tabSwitch = () => {
 }
 
 tabSwitch();
+
+
+// Скрытие боковой панели
+
+const toggleAside = () => {
+  const burgerBtn = document.querySelector('.section-header .burger-btn');
+  const aside = document.querySelector('.section-main .aside.main__aside');
+
+  if(!burgerBtn && !aside) return;
+
+  burgerBtn.addEventListener('click', () => {
+    aside.classList.toggle('open');
+  })
+}
+
+toggleAside();
+
+function media() {
+  const mainContent = document.querySelector('.section-main .content.main__content');
+  const aside = document.querySelector('.section-main .aside')
+
+  window.addEventListener('resize', e => {
+    if(parseInt(window.getComputedStyle(mainContent).width) <= 768) {
+      mainContent.classList.add('media-768');
+    } else {
+      mainContent.classList.remove('media-768');
+    }
+
+    if(parseInt(window.getComputedStyle(mainContent).width) <= 576) {
+      mainContent.classList.add('media-576');
+    } else {
+      mainContent.classList.remove('media-576');
+    }
+  });
+}
+
+// media();

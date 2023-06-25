@@ -14,6 +14,15 @@
     text-align: left;
     color: $color-text-secondary;
     background-color: #ecf1f4;  
+
+    @media screen and (max-width: 768px) {
+      padding: 5px 10px;
+      font-size: $fs-xxs;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: $fs-xxxs;
+    }
   }
 
   &__td {

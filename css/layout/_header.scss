@@ -22,4 +22,24 @@
   &__user {
     margin-left: auto;
   }
+
+  &__search {
+    @media screen and (max-width: 768px) {
+      .search__input {
+        width: 70%;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  &__user {
+    @media screen and (max-width: 768px) {
+      .user__info {
+        display: none;
+      }
+    }
+  }
 }

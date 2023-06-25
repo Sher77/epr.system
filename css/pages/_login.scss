@@ -40,6 +40,10 @@
     display: flex;
     flex-direction: column;
     width: 300px;
+    
+    @media screen and (max-width: 576px) {
+      width: auto;
+    }
 
     &__label {
       display: flex;
