@@ -1,12 +1,15 @@
 .form-work {
-  &__label {
-    display: block;
-
+  &__block {
     &:not(:last-child) {
       margin-bottom: 64px;
     }
+  }
 
-    &:first-child {
+  &__label {
+    display: block;
+    cursor: pointer;
+
+    &:not(:last-child) {
       margin-bottom: 40px;
     }
   }

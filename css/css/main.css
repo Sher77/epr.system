@@ -687,6 +687,8 @@ body {
      object-fit: cover;
 }
 .user__info {
+  display: flex;
+  flex-direction: column;
   margin-right: 10px;
   text-align: left;
 }
@@ -1008,13 +1010,14 @@ body {
   display: block;
 }
 
-.form-work__label {
-  display: block;
-}
-.form-work__label:not(:last-child) {
+.form-work__block:not(:last-child) {
   margin-bottom: 64px;
 }
-.form-work__label:first-child {
+.form-work__label {
+  display: block;
+  cursor: pointer;
+}
+.form-work__label:not(:last-child) {
   margin-bottom: 40px;
 }
 .form-work__desc {
